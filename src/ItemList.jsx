@@ -1,8 +1,9 @@
 import ItemCard from "./ItemCard.jsx";
+import StatusMessage from "./StatusMessage.jsx";
 
 export default function ItemList({ items, onRemove, onToggleFavorite }) {
   if (items.length === 0) {
-    return <p className="empty-message">No games found. Try another category!</p>;
+    return <StatusMessage />;
   }
 
   return (
