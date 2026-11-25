@@ -1,40 +1,52 @@
-# Assignment 4 Starter: React Component Collection
+# The Hobby Shelf — Assignment 4
 
-This folder is your starting point for Assignment 4. Copy everything inside it, not the folder itself, into your cloned `cs300-assignment-4` repository.
+**Name:** Gerardo Gil  
+**Course:** CS300 Client-Side Web Development  
+**Scenario:** Hobby Collection
 
-## What Is Here
+**Live Application:** https://juniorgil02.github.io/cs300-assignment-4/  
+**GitHub Repository:** https://github.com/juniorgil02/cs300-assignment-4
 
-- `package.json` and `package-lock.json`: the exact React and Vitest versions. Do not edit them.
-- `vite.config.js` and `index.html`: the Vite setup. You add one `base` line to `vite.config.js` when you deploy.
-- `src/App.jsx`: your app starts here.
-- `src/App.test.jsx`: two sample tests so `npm test` passes from the start. Add your own test files next to your components.
-- `src/main.jsx`, `src/styles.css`, and `src/test-setup.js`: startup, your CSS, and test setup.
-- `data/`: the four scenario datasets, plus `empty.json`, `incomplete.json`, and `boundary-records.json` for checking unusual data.
-- `SCENARIOS.md`: the four scenarios. Pick one.
-- `.gitignore`: keeps `node_modules` and `dist` out of Git.
-- `.github/workflows/deploy.yml`: the GitHub Pages workflow. It builds and publishes your app on every push to `main`; you do not edit it. The `.github` folder starts with a dot and may be hidden; on a Mac, press Shift+Cmd+. in Finder to see it before you copy.
+## About the Application
 
-## Your First 15 Minutes
+The Hobby Shelf is a React application for organizing a personal collection of games.
 
-You need Node 24 (any 24.x version; `node --version` starts with `v24`; an npm engine warning about the exact version is fine).
+Users can add games, remove games, and mark their favorite items.
 
-1. Open your `cs300-assignment-4` folder in VS Code and choose **Terminal > New Terminal**.
-2. Run `npm ci`. It installs the exact packages and takes a minute or two. npm may report vulnerabilities in test tools; do not run `npm audit fix`, which would change the lockfile.
-3. Run `npm run dev` and open the address it prints, usually `http://localhost:5173/`. You should see "Your application starts here."
-4. Press Ctrl+C, then run `npm test`. The two sample tests should pass.
-5. Open `SCENARIOS.md`, pick a scenario, and open its data file in `data/`.
-6. Replace everything in this README with your name and your scenario.
-7. Commit with the message `Add starter files and choose scenario` and push.
+The application also supports category filtering, sorting, form validation, and an empty-state message.
 
-## Your README Before You Submit
+## Components
 
-By the deadline, your README must have:
+- **App:** Owns the collection and application state.
+- **Header:** Displays the application title and introduction.
+- **ItemForm:** Allows users to add games with validation.
+- **CollectionControls:** Provides filtering and sorting.
+- **ItemList:** Displays the collection.
+- **ItemCard:** Displays individual games and their actions.
+- **StatusMessage:** Displays a message when no games match the selected criteria.
 
-- Your name and your scenario.
-- Your live URL.
-- How to run the app: `npm ci`, `npm run dev`, and `npm test`.
-- A 3-line description of your app.
+## How to Run the Application
 
-Your screenshots and answers go in the submission template, which you export as one PDF.
+Install dependencies:
 
-Questions? Email dmandloi@neiu.edu.
+```bash
+npm ci
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Run automated tests:
+
+```bash
+npm test
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
